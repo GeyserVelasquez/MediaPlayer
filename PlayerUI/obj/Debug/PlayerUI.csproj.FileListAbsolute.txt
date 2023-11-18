@@ -1,0 +1,43 @@
+G:\VS Project\PlayerUI\PlayerUI\bin\Debug\PlayerUI.exe.config
+G:\VS Project\PlayerUI\PlayerUI\obj\Debug\PlayerUI.csprojResolveAssemblyReference.cache
+G:\VS Project\PlayerUI\PlayerUI\obj\Debug\PlayerUI.Properties.Resources.resources
+G:\VS Project\PlayerUI\PlayerUI\obj\Debug\PlayerUI.csproj.GenerateResource.Cache
+G:\VS Project\PlayerUI\PlayerUI\bin\Debug\PlayerUI.exe
+G:\VS Project\PlayerUI\PlayerUI\bin\Debug\PlayerUI.pdb
+G:\VS Project\PlayerUI\PlayerUI\obj\Debug\PlayerUI.Form1.resources
+G:\VS Project\PlayerUI\PlayerUI\obj\Debug\PlayerUI.Form2.resources
+G:\VS Project\PlayerUI\PlayerUI\obj\Debug\PlayerUI.Form3.resources
+G:\VS Project\PlayerUI\PlayerUI\obj\Debug\PlayerUI.exe
+G:\VS Project\PlayerUI\PlayerUI\obj\Debug\PlayerUI.pdb
+D:\RJ Code Advance\Test Projects\PlayerUI\PlayerUI\bin\Debug\PlayerUI.exe.config
+D:\RJ Code Advance\Test Projects\PlayerUI\PlayerUI\obj\Debug\PlayerUI.exe
+D:\RJ Code Advance\Test Projects\PlayerUI\PlayerUI\obj\Debug\PlayerUI.pdb
+C:\Users\LAB2-DESCK29\Desktop\Modern-Media-Player\PlayerUI\bin\Debug\PlayerUI.exe.config
+C:\Users\LAB2-DESCK29\Desktop\Modern-Media-Player\PlayerUI\obj\Debug\PlayerUI.exe
+C:\Users\LAB2-DESCK29\Desktop\Modern-Media-Player\PlayerUI\obj\Debug\PlayerUI.pdb
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\PlayerUI.exe.config
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\PlayerUI.exe
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\PlayerUI.pdb
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\PlayerUI.exe
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\PlayerUI.pdb
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\mscorlib.dll
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\System.Net.Http.dll
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\System.Net.Http.xml
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\es\mscorlib.resources.dll
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\es\System.Net.Http.resources.dll
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\normidna.nlp
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\normnfc.nlp
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\normnfd.nlp
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\normnfkc.nlp
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\normnfkd.nlp
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\PlayerUI.csprojResolveAssemblyReference.cache
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\PlayerUI.Form1.resources
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\PlayerUI.Form2.resources
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\PlayerUI.Form3.resources
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\PlayerUI.Properties.Resources.resources
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\PlayerUI.csproj.GenerateResource.Cache
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\Interop.WMPLib.dll
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\Interop.WMPLib.dll
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\PlayerUI.csproj.ResolveComReference.cache
