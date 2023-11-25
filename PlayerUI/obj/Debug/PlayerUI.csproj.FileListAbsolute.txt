@@ -41,3 +41,7 @@ C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Playe
 C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\Interop.WMPLib.dll
 C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\PlayerUI.csproj.ResolveComReference.cache
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\bin\Debug\taglib-sharp.dll
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\Interop.MediaPlayer.dll
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\Interop.WMPDXMLib.dll
+C:\Users\gvela\OneDrive\Documents\Universidad\Programacion II\Modern-Media-Player\PlayerUI\obj\Debug\Interop.WMPLauncher.dll

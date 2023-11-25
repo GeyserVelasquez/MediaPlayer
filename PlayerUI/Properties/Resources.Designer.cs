@@ -91,6 +91,16 @@ namespace PlayerUI.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a cancion1.mp3 cancion1.mp3 cancion1.mp3 C:/Users/gvela/OneDrive/Documents/Universidad/Programacion II/Modern-Media-Player/PlayerUI/Resources/Canciones.txt
+        ///.
+        /// </summary>
+        internal static string Canciones {
+            get {
+                return ResourceManager.GetString("Canciones", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap engranaje__1_ {
@@ -121,6 +131,16 @@ namespace PlayerUI.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon icono {
+            get {
+                object obj = ResourceManager.GetObject("icono", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap informacion__1_ {
@@ -136,6 +156,16 @@ namespace PlayerUI.Properties {
         internal static System.Drawing.Bitmap lazo__1_ {
             get {
                 object obj = ResourceManager.GetObject("lazo (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login {
+            get {
+                object obj = ResourceManager.GetObject("login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +213,9 @@ namespace PlayerUI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap nota_musical__1_ {
+        internal static System.Drawing.Bitmap nota_musical {
             get {
-                object obj = ResourceManager.GetObject("nota-musical (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("nota-musical", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

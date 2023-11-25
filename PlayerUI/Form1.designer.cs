@@ -30,9 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnHelp = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.panelToolsSubMenu = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -46,13 +47,14 @@
             this.btnPlaylist = new System.Windows.Forms.Button();
             this.panelMediaSubMenu = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.abrirArchivos = new System.Windows.Forms.Button();
             this.btnMedia = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelPlayer = new System.Windows.Forms.Panel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label3 = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.volBar = new System.Windows.Forms.TrackBar();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -63,7 +65,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.mainPlayer = new AxWMPLib.AxWindowsMediaPlayer();
+            holick = new AxWMPLib.AxWindowsMediaPlayer();
             this.panelSideMenu.SuspendLayout();
             this.panelToolsSubMenu.SuspendLayout();
             this.panelPlaylistSubMenu.SuspendLayout();
@@ -71,7 +73,7 @@
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelPlayer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.volBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -80,16 +82,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelChildForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mainPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(holick)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(120)))), ((int)(((byte)(189)))));
+            this.panelSideMenu.Controls.Add(this.button2);
             this.panelSideMenu.Controls.Add(this.button3);
             this.panelSideMenu.Controls.Add(this.btnExit);
-            this.panelSideMenu.Controls.Add(this.btnHelp);
+            this.panelSideMenu.Controls.Add(this.btnLogin);
             this.panelSideMenu.Controls.Add(this.panelToolsSubMenu);
             this.panelSideMenu.Controls.Add(this.btnTools);
             this.panelSideMenu.Controls.Add(this.panelPlaylistSubMenu);
@@ -103,6 +106,27 @@
             this.panelSideMenu.Size = new System.Drawing.Size(250, 600);
             this.panelSideMenu.TabIndex = 0;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(72)))), ((int)(((byte)(87)))));
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::PlayerUI.Properties.Resources.informacion__1_;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 648);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(229, 44);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "  Ayuda";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(72)))), ((int)(((byte)(87)))));
@@ -114,7 +138,7 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::PlayerUI.Properties.Resources.pantalla_completa__1_;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 648);
+            this.button3.Location = new System.Drawing.Point(0, 692);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(229, 52);
@@ -135,7 +159,7 @@
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Image = global::PlayerUI.Properties.Resources.salida__1_;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(0, 700);
+            this.btnExit.Location = new System.Drawing.Point(0, 744);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnExit.Size = new System.Drawing.Size(229, 52);
@@ -146,27 +170,27 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnHelp
+            // btnLogin
             // 
-            this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(72)))), ((int)(((byte)(87)))));
-            this.btnHelp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHelp.FlatAppearance.BorderSize = 0;
-            this.btnHelp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.btnHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.ForeColor = System.Drawing.Color.White;
-            this.btnHelp.Image = global::PlayerUI.Properties.Resources.informacion__1_;
-            this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.Location = new System.Drawing.Point(0, 604);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnHelp.Size = new System.Drawing.Size(229, 44);
-            this.btnHelp.TabIndex = 8;
-            this.btnHelp.Text = "  Ayuda";
-            this.btnHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHelp.UseVisualStyleBackColor = false;
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(72)))), ((int)(((byte)(87)))));
+            this.btnLogin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Image = global::PlayerUI.Properties.Resources.login;
+            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.Location = new System.Drawing.Point(0, 604);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnLogin.Size = new System.Drawing.Size(229, 44);
+            this.btnLogin.TabIndex = 8;
+            this.btnLogin.Text = "  Usuario";
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // panelToolsSubMenu
             // 
@@ -376,7 +400,7 @@
             // 
             this.panelMediaSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(120)))), ((int)(((byte)(189)))));
             this.panelMediaSubMenu.Controls.Add(this.button5);
-            this.panelMediaSubMenu.Controls.Add(this.button2);
+            this.panelMediaSubMenu.Controls.Add(this.abrirArchivos);
             this.panelMediaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMediaSubMenu.Location = new System.Drawing.Point(0, 137);
             this.panelMediaSubMenu.Name = "panelMediaSubMenu";
@@ -402,24 +426,24 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button2
+            // abrirArchivos
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(112)))), ((int)(((byte)(138)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(229, 40);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Abrir Archivos";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.abrirArchivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(112)))), ((int)(((byte)(138)))));
+            this.abrirArchivos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.abrirArchivos.FlatAppearance.BorderSize = 0;
+            this.abrirArchivos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.abrirArchivos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.abrirArchivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abrirArchivos.ForeColor = System.Drawing.Color.White;
+            this.abrirArchivos.Location = new System.Drawing.Point(0, 0);
+            this.abrirArchivos.Name = "abrirArchivos";
+            this.abrirArchivos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.abrirArchivos.Size = new System.Drawing.Size(229, 40);
+            this.abrirArchivos.TabIndex = 0;
+            this.abrirArchivos.Text = "Abrir Archivos";
+            this.abrirArchivos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.abrirArchivos.UseVisualStyleBackColor = false;
+            this.abrirArchivos.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnMedia
             // 
@@ -430,7 +454,7 @@
             this.btnMedia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(120)))), ((int)(((byte)(189)))));
             this.btnMedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMedia.ForeColor = System.Drawing.Color.White;
-            this.btnMedia.Image = global::PlayerUI.Properties.Resources.nota_musical__1_;
+            this.btnMedia.Image = global::PlayerUI.Properties.Resources.nota_musical;
             this.btnMedia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMedia.Location = new System.Drawing.Point(0, 92);
             this.btnMedia.Name = "btnMedia";
@@ -466,8 +490,9 @@
             // panelPlayer
             // 
             this.panelPlayer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(112)))), ((int)(((byte)(138)))));
+            this.panelPlayer.Controls.Add(this.progressBar1);
             this.panelPlayer.Controls.Add(this.label3);
-            this.panelPlayer.Controls.Add(this.trackBar1);
+            this.panelPlayer.Controls.Add(this.volBar);
             this.panelPlayer.Controls.Add(this.label2);
             this.panelPlayer.Controls.Add(this.label1);
             this.panelPlayer.Controls.Add(this.pictureBox8);
@@ -483,6 +508,14 @@
             this.panelPlayer.Size = new System.Drawing.Size(700, 130);
             this.panelPlayer.TabIndex = 1;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(68, 81);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(570, 23);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar1.TabIndex = 12;
+            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -494,13 +527,13 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "0%";
             // 
-            // trackBar1
+            // volBar
             // 
-            this.trackBar1.Location = new System.Drawing.Point(389, 25);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(200, 56);
-            this.trackBar1.TabIndex = 9;
-            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.volBar.Location = new System.Drawing.Point(397, 25);
+            this.volBar.Name = "volBar";
+            this.volBar.Size = new System.Drawing.Size(200, 56);
+            this.volBar.TabIndex = 9;
+            this.volBar.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
             // label2
             // 
@@ -581,6 +614,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -593,6 +627,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -605,26 +640,28 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(72)))), ((int)(((byte)(87)))));
             this.panelChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panelChildForm.Controls.Add(this.mainPlayer);
+            this.panelChildForm.Controls.Add(holick);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(250, 0);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(700, 470);
             this.panelChildForm.TabIndex = 2;
             // 
-            // mainPlayer
+            // holick
             // 
-            this.mainPlayer.Enabled = true;
-            this.mainPlayer.Location = new System.Drawing.Point(32, 38);
-            this.mainPlayer.Name = "mainPlayer";
-            this.mainPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mainPlayer.OcxState")));
-            this.mainPlayer.Size = new System.Drawing.Size(640, 400);
-            this.mainPlayer.TabIndex = 10;
+            holick.Enabled = true;
+            holick.Location = new System.Drawing.Point(31, 25);
+            holick.Name = "holick";
+            holick.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("holick.OcxState")));
+            holick.Size = new System.Drawing.Size(640, 420);
+            holick.TabIndex = 0;
+            holick.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(holick_PlayStateChange);
             // 
             // Form1
             // 
@@ -650,7 +687,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelPlayer.ResumeLayout(false);
             this.panelPlayer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.volBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -659,7 +696,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelChildForm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mainPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(holick)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -669,14 +706,11 @@
         private System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Panel panelMediaSubMenu;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button abrirArchivos;
         private System.Windows.Forms.Button btnMedia;
-        private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Panel panelToolsSubMenu;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button btnTools;
         private System.Windows.Forms.Panel panelPlaylistSubMenu;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button6;
@@ -685,7 +719,6 @@
         private System.Windows.Forms.Button btnPlaylist;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panelPlayer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox8;
@@ -698,9 +731,15 @@
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private AxWMPLib.AxWindowsMediaPlayer mainPlayer;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar volBar;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnTools;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        public static AxWMPLib.AxWindowsMediaPlayer holick;
     }
 }
 

@@ -12,10 +12,20 @@ namespace PlayerUI
 {
     public partial class Form1 : Form
     {
+        public Form formy2;
+
         public Form1()
         {
             InitializeComponent();
             hideSubMenu();
+            Archivos.CrearCarpeta();
+            formy2 = new Form2();
+            //holick.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(holick_PlayStateChange);
+
+
+            //Archivos.archivoSeleccionado = Archivos.carpetaSeleccionada + "\\Multimedia.txt";
+
+            //Archivos.Leer(Archivos.archivoSeleccionado, Form2.visorDeArchivos);
         }
 
         private void hideSubMenu()
@@ -44,11 +54,10 @@ namespace PlayerUI
         #region MediaSubMenu
         private void button2_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form2());
-            //..
-            //your codes
-            //..
+            openChildForm(formy2);
+
             hideSubMenu();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -187,5 +196,92 @@ namespace PlayerUI
             childForm.BringToFront();
             childForm.Show();
         }
-    }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Archivos.ControlarPlayer();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Archivos.ObtenerTrack(++Archivos.track);
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Archivos.ObtenerTrack(--Archivos.track);
+
+        }
+
+        private void holick_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
+        {
+            switch (e.newState)
+            {
+                case 0:    // Undefined
+                    Console.WriteLine("Undefined");
+                    break;
+
+                case 1:    // Stopped
+                    Console.WriteLine("Stopped");
+                    break;
+
+                case 2:    // Paused
+                    Console.WriteLine("Paused");
+                    break;
+
+                case 3:    // Playing
+                    Console.WriteLine ( "Playing");
+                    break;
+
+                case 4:    // ScanForward
+                    Console.WriteLine ( "ScanForward");
+                    break;
+
+                case 5:    // ScanReverse
+                    Console.WriteLine ( "ScanReverse");
+                    break;
+
+                case 6:    // Buffering
+                    Console.WriteLine ( "Buffering");
+                    break;
+
+                case 7:    // Waiting
+                    Console.WriteLine ( "Waiting");
+                    break;
+
+                case 8:    // MediaEnded
+                    Console.WriteLine ( "MediaEnded");
+                    Archivos.ObtenerTrack(++Archivos.track);
+                    //Archivos.ControlarPlayer();
+                    break;
+
+                case 9:    // Transitioning
+                    Console.WriteLine ( "Transitioning");
+                    break;
+
+                case 10:   // Ready
+                    Console.WriteLine ( "Ready");
+                    Archivos.ControlarPlayer();
+                    break;
+
+                case 11:   // Reconnecting
+                    Console.WriteLine ( "Reconnecting");
+                    break;
+
+                case 12:   // Last
+                    Console.WriteLine ( "Last");
+                    break;
+
+                default:
+                    Console.WriteLine ( ("Unknown State: " + e.newState.ToString()));
+                    break;
+                }
+            }
+       }
 }

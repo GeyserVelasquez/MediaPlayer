@@ -20,3 +20,5 @@ namespace PlayerUI
         }
     }
 }
+
+//Todas los iconos de este programa fueron obtenidos de: https://www.flaticon.es
