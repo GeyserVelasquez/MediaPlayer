@@ -12,7 +12,6 @@ namespace PlayerUI // Mandar Form2 a la mierda
 {
     public partial class Form2 : Form
     {
-        //public AxWMPLib.AxWindowsMediaPlayer auxPlayer { get; set; }
 
 
         public Form2()
@@ -27,7 +26,7 @@ namespace PlayerUI // Mandar Form2 a la mierda
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            this.Close();
         }
 
         private void explorarArchivos_Click(object sender, EventArgs e)
@@ -50,7 +49,7 @@ namespace PlayerUI // Mandar Form2 a la mierda
 
             //Archivos.ControlarPlayer();
 
-            this.Visible=false;
+            this.Close();
         }
     }
 }

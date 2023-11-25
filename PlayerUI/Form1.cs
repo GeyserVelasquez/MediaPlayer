@@ -12,7 +12,7 @@ namespace PlayerUI
 {
     public partial class Form1 : Form
     {
-        public Form formy2;
+        public static Form formy2;
 
         public Form1()
         {
@@ -20,12 +20,6 @@ namespace PlayerUI
             hideSubMenu();
             Archivos.CrearCarpeta();
             formy2 = new Form2();
-            //holick.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(holick_PlayStateChange);
-
-
-            //Archivos.archivoSeleccionado = Archivos.carpetaSeleccionada + "\\Multimedia.txt";
-
-            //Archivos.Leer(Archivos.archivoSeleccionado, Form2.visorDeArchivos);
         }
 
         private void hideSubMenu()
@@ -54,6 +48,8 @@ namespace PlayerUI
         #region MediaSubMenu
         private void button2_Click(object sender, EventArgs e)
         {
+            if (formy2 == null || formy2.IsDisposed) formy2 = new Form2();
+
             openChildForm(formy2);
 
             hideSubMenu();
