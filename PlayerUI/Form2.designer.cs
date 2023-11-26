@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tituloForm2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            visorDeArchivos = new System.Windows.Forms.DataGridView();
+            this.visorDeArchivos = new System.Windows.Forms.DataGridView();
             this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.artista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.album = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +43,7 @@
             this.EliminarArchivo = new System.Windows.Forms.Button();
             this.explorarArchivos = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(visorDeArchivos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.visorDeArchivos)).BeginInit();
             this.SuspendLayout();
             // 
             // tituloForm2
@@ -72,14 +72,14 @@
             // 
             // visorDeArchivos
             // 
-            visorDeArchivos.AllowUserToAddRows = false;
-            visorDeArchivos.AllowUserToDeleteRows = false;
-            visorDeArchivos.AllowUserToResizeColumns = false;
-            visorDeArchivos.AllowUserToResizeRows = false;
-            visorDeArchivos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            visorDeArchivos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(112)))), ((int)(((byte)(138)))));
-            visorDeArchivos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            visorDeArchivos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.visorDeArchivos.AllowUserToAddRows = false;
+            this.visorDeArchivos.AllowUserToDeleteRows = false;
+            this.visorDeArchivos.AllowUserToResizeColumns = false;
+            this.visorDeArchivos.AllowUserToResizeRows = false;
+            this.visorDeArchivos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.visorDeArchivos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(112)))), ((int)(((byte)(138)))));
+            this.visorDeArchivos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.visorDeArchivos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(111)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -87,10 +87,10 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            visorDeArchivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            visorDeArchivos.ColumnHeadersHeight = 20;
-            visorDeArchivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            visorDeArchivos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.visorDeArchivos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.visorDeArchivos.ColumnHeadersHeight = 20;
+            this.visorDeArchivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.visorDeArchivos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.title,
             this.artista,
             this.album,
@@ -103,15 +103,15 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            visorDeArchivos.DefaultCellStyle = dataGridViewCellStyle2;
-            visorDeArchivos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            visorDeArchivos.EnableHeadersVisualStyles = false;
-            visorDeArchivos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(111)))), ((int)(((byte)(240)))));
-            visorDeArchivos.Location = new System.Drawing.Point(9, 113);
-            visorDeArchivos.Margin = new System.Windows.Forms.Padding(0);
-            visorDeArchivos.Name = "visorDeArchivos";
-            visorDeArchivos.ReadOnly = true;
-            visorDeArchivos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.visorDeArchivos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.visorDeArchivos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.visorDeArchivos.EnableHeadersVisualStyles = false;
+            this.visorDeArchivos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(111)))), ((int)(((byte)(240)))));
+            this.visorDeArchivos.Location = new System.Drawing.Point(9, 113);
+            this.visorDeArchivos.Margin = new System.Windows.Forms.Padding(0);
+            this.visorDeArchivos.Name = "visorDeArchivos";
+            this.visorDeArchivos.ReadOnly = true;
+            this.visorDeArchivos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(120)))), ((int)(((byte)(189)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,14 +119,14 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            visorDeArchivos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            visorDeArchivos.RowHeadersVisible = false;
-            visorDeArchivos.RowHeadersWidth = 20;
-            visorDeArchivos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            visorDeArchivos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            visorDeArchivos.Size = new System.Drawing.Size(502, 301);
-            visorDeArchivos.TabIndex = 2;
-            visorDeArchivos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(visorDeArchivos_CellClick);
+            this.visorDeArchivos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.visorDeArchivos.RowHeadersVisible = false;
+            this.visorDeArchivos.RowHeadersWidth = 20;
+            this.visorDeArchivos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.visorDeArchivos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.visorDeArchivos.Size = new System.Drawing.Size(502, 301);
+            this.visorDeArchivos.TabIndex = 2;
+            this.visorDeArchivos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.visorDeMedia_CellClick);
             // 
             // title
             // 
@@ -210,6 +210,7 @@
             this.EliminarArchivo.TabIndex = 5;
             this.EliminarArchivo.Text = "Eliminar Archivo";
             this.EliminarArchivo.UseVisualStyleBackColor = false;
+            this.EliminarArchivo.Click += new System.EventHandler(this.EliminarArchivo_Click);
             // 
             // explorarArchivos
             // 
@@ -226,7 +227,7 @@
             this.explorarArchivos.TabIndex = 6;
             this.explorarArchivos.Text = "Añadir Archivo";
             this.explorarArchivos.UseVisualStyleBackColor = false;
-            this.explorarArchivos.Click += new System.EventHandler(this.explorarArchivos_Click);
+            this.explorarArchivos.Click += new System.EventHandler(this.explorarMedia_Click);
             // 
             // button5
             // 
@@ -255,13 +256,13 @@
             this.Controls.Add(this.EliminarArchivo);
             this.Controls.Add(this.ordenarArchivos);
             this.Controls.Add(this.agruparArchivos);
-            this.Controls.Add(visorDeArchivos);
+            this.Controls.Add(this.visorDeArchivos);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tituloForm2);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)(visorDeArchivos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.visorDeArchivos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,7 +272,6 @@
 
         private System.Windows.Forms.Label tituloForm2;
         private System.Windows.Forms.TextBox textBox1;
-        public static System.Windows.Forms.DataGridView visorDeArchivos;
         private System.Windows.Forms.Button agruparArchivos;
         private System.Windows.Forms.Button ordenarArchivos;
         private System.Windows.Forms.Button EliminarArchivo;
@@ -281,5 +281,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn artista;
         private System.Windows.Forms.DataGridViewTextBoxColumn album;
         private System.Windows.Forms.DataGridViewTextBoxColumn anno;
+        public System.Windows.Forms.DataGridView visorDeArchivos;
     }
 }

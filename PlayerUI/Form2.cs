@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,10 +19,7 @@ namespace PlayerUI // Mandar Form2 a la mierda
         {
             InitializeComponent();
 
-            Archivos.archivoSeleccionado = Archivos.carpetaSeleccionada+"\\Multimedia.txt";
-
-            Archivos.Leer(Archivos.archivoSeleccionado, visorDeArchivos);
-
+            Media.Leer(Media.PlayListActual, visorDeArchivos);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -29,27 +27,35 @@ namespace PlayerUI // Mandar Form2 a la mierda
             this.Close();
         }
 
-        private void explorarArchivos_Click(object sender, EventArgs e)
+        private void explorarMedia_Click(object sender, EventArgs e)
         {
-            Archivos.AbrirExploradorDeArchivos(visorDeArchivos);
+            Media.AbrirExploradorDeMedia(visorDeArchivos);
         }
 
-        private void visorDeArchivos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void visorDeMedia_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
         }
 
-        private void visorDeArchivos_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void visorDeMedia_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int celda = e.RowIndex;
 
-            Archivos.track = celda;
+            Media.PlayListActual.track = celda;
 
-            Archivos.ObtenerTrack(celda);
+            Media.CambiarTrack(celda);
 
-            //Archivos.ControlarPlayer();
+            Console.WriteLine("Numero de Track: " + Media.PlayListActual.track);
+
+            Console.WriteLine(Media.PlayListActual.tamanio);
 
             this.Close();
+        }
+
+        private void EliminarArchivo_Click(object sender, EventArgs e)
+        {
+            Media.PlayListActual.track = 66;
+            Console.WriteLine(Form1.Multimedia.track);
         }
     }
 }

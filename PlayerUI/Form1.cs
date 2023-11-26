@@ -12,14 +12,25 @@ namespace PlayerUI
 {
     public partial class Form1 : Form
     {
-        public static Form formy2;
+        public Form formy2;
+        public Form formy3;
+        public static PlayList Multimedia;
+        public static int a = 10;
+        public static int c;
 
         public Form1()
         {
             InitializeComponent();
             hideSubMenu();
-            Archivos.CrearCarpeta();
+            Media.CrearCarpeta();
+            Multimedia = new PlayList("Multimedia");
+            Media.PlayListActual = Multimedia;
             formy2 = new Form2();
+            formy3 = new Form3();
+            Console.WriteLine("---------------------");
+            c = a;
+            a--;
+            Console.WriteLine(c);
         }
 
         private void hideSubMenu()
@@ -89,6 +100,9 @@ namespace PlayerUI
         #region PlayListManagemetSubMenu
         private void button8_Click(object sender, EventArgs e)
         {
+            if (formy3 == null || formy3.IsDisposed) formy3 = new Form3();
+
+            openChildForm(formy3);
             //..
             //your codes
             //..
@@ -180,6 +194,7 @@ namespace PlayerUI
         }
 
         private Form activeForm = null;
+
         private void openChildForm(Form childForm)
         {
             if (activeForm != null) activeForm.Close();
@@ -200,19 +215,23 @@ namespace PlayerUI
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Archivos.ControlarPlayer();
+            Media.ControlarPlayer();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Archivos.ObtenerTrack(++Archivos.track);
-
+            if (Media.PlayListActual.track+1 < Media.PlayListActual.tamanio)
+            {
+                Media.CambiarTrack(++Media.PlayListActual.track);
+            }
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Archivos.ObtenerTrack(--Archivos.track);
-
+            if (Media.PlayListActual.track-1 > -1)
+            {
+                Media.CambiarTrack(--Media.PlayListActual.track);
+            }
         }
 
         private void holick_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
@@ -253,8 +272,10 @@ namespace PlayerUI
 
                 case 8:    // MediaEnded
                     Console.WriteLine ( "MediaEnded");
-                    Archivos.ObtenerTrack(++Archivos.track);
-                    //Archivos.ControlarPlayer();
+                    if (Media.PlayListActual.track + 1 < Media.PlayListActual.tamanio) 
+                    {
+                        Media.CambiarTrack(++Media.PlayListActual.track); 
+                    }
                     break;
 
                 case 9:    // Transitioning
@@ -263,7 +284,7 @@ namespace PlayerUI
 
                 case 10:   // Ready
                     Console.WriteLine ( "Ready");
-                    Archivos.ControlarPlayer();
+                    Media.ControlarPlayer();
                     break;
 
                 case 11:   // Reconnecting
